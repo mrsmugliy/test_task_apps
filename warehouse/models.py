@@ -16,6 +16,9 @@ class Warehouse(models.Model):
     created_at = models.DateTimeField(auto_now_add=True, verbose_name='Date of creation')
     modified_at = models.DateTimeField(auto_now=True, verbose_name='Date of change')
 
+    def __str__(self):
+        return f'id: {self.id}'
+
 
 class WarehouseProduct(models.Model):
     """
